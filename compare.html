@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Your Journey | Major Lens</title>
+  <meta name="description" content="Choose the path that matches your situation, explore KU majors, and book a fictional advising or faculty meeting.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="https://www.ku.ac.ae" aria-label="Khalifa University website">
+          <img class="brand-logo" src="assets/ku-symbol-logo.png" alt="Khalifa University logo">
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="nav-menu" id="site-menu">
+          <a href="index.html">Home</a>
+          <a href="problem.html">The Problem</a>
+          <a href="findings.html">Our Findings</a>
+          <a href="what-we-do.html">What We Do</a>
+          <a href="about.html">About</a>
+          <a class="nav-cta active" href="compare.html">Start Your Journey</a>
+        </div>
+        <div class="nav-extras">
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+            <span class="theme-toggle-track">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-text">Dark mode</span>
+          </button>
+          <div class="clock-chip" aria-live="polite">
+            <span class="clock-label">Local time</span>
+            <span id="nav-clock">--:--</span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero-compare">
+      <div class="container narrow">
+        <p class="eyebrow">Start Your Journey</p>
+        <h1 data-typewriter>Two paths, one goal: start your university major with clearer expectations.</h1>
+        <p class="lead">Choose the route that matches your situation. This page is the public-facing service experience where students get redirected toward the right major support or the right faculty-style meeting.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="path-switcher" role="tablist" aria-label="Journey paths">
+          <button class="path-btn active" type="button" data-path-target="undecided" aria-selected="true">I do not know which major to choose</button>
+          <button class="path-btn" type="button" data-path-target="decided" aria-selected="false">I chose a major, but I am not aware of it yet</button>
+        </div>
+
+        <div class="booking-feedback" id="booking-feedback" aria-live="polite"></div>
+
+        <section class="journey-panel" id="journey-undecided">
+          <div class="section-heading">
+            <p class="eyebrow">Path One</p>
+            <h2>Start with the kind of support you need, not with random major pages.</h2>
+            <p>Students who are undecided can begin with advising pathways that simplify the first conversation and lead them toward a relevant professor or advisor meeting.</p>
+          </div>
+          <div class="advisor-grid">
+            <article class="advisor-card">
+              <span class="major-tag">Exploration Meeting</span>
+              <h3>Computing and AI pathway</h3>
+              <p>Best for students deciding between Computer Science, Computer Engineering, Robotics and AI, and related analytical majors.</p>
+              <button class="button secondary booking-button" type="button" data-book-target="Computing and AI exploration meeting">Book this meeting</button>
+            </article>
+            <article class="advisor-card">
+              <span class="major-tag">Exploration Meeting</span>
+              <h3>Engineering pathway</h3>
+              <p>Best for students choosing among Mechanical, Civil, Chemical, Electrical, Aerospace, Energy, Petroleum, and Biomedical Engineering.</p>
+              <button class="button secondary booking-button" type="button" data-book-target="Engineering exploration meeting">Book this meeting</button>
+            </article>
+            <article class="advisor-card">
+              <span class="major-tag">Exploration Meeting</span>
+              <h3>Science and math pathway</h3>
+              <p>Best for students comparing Applied Mathematics, Chemistry, Physics, Cell and Molecular Biology, and Earth and Planetary Sciences.</p>
+              <button class="button secondary booking-button" type="button" data-book-target="Science and mathematics exploration meeting">Book this meeting</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="journey-panel" id="journey-decided" hidden>
+          <div class="section-heading">
+            <p class="eyebrow">Path Two</p>
+            <h2>Pick the major you already chose and get a clearer reality check before day one.</h2>
+            <p>The KU major explorer below is designed for students who already selected a major but still need to understand its expected workload, complexity, and recommended meeting type.</p>
+          </div>
+          <div class="major-browser">
+            <div class="major-grid" id="major-grid" aria-label="KU majors"></div>
+            <article class="major-detail" id="major-detail" aria-live="polite"></article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="https://www.ku.ac.ae" aria-label="Khalifa University website">
+          <img class="brand-logo footer-logo" src="assets/ku-symbol-logo.png" alt="Khalifa University logo">
+        </a>
+        <p>Helping students choose a major, or understand the one they already chose, with more clarity and earlier guidance.</p>
+      </div>
+      <div class="footer-links">
+        <a href="problem.html">The Problem</a>
+        <a href="findings.html">Our Findings</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="about.html">About</a>
+        <a href="compare.html">Start Your Journey</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
